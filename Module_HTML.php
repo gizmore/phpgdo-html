@@ -38,13 +38,13 @@ final class Module_HTML extends GDO_Module
 		GDT_Message::addDecoder('HTML', [self::class, 'DECODE']);
 	}
 	
-	public static function DECODE(string $s): string
+	public function decode(string $s): string
 	{
 		$s = Strings::nl2brHTMLSafe($s);
-		return self::PURIFY($s);
+		return self::purify($s);
 	}
 
-	public static function PURIFY(string $s): string
+	public  function purify(string $s): string
 	{
 		return Decoder::decode($s);
 	}
