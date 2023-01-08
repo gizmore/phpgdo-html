@@ -41,12 +41,12 @@ final class Module_HTML extends GDO_Module
 	public function decode(string $s): string
 	{
 		$s = Strings::nl2brHTMLSafe($s);
-		return self::purify($s);
+		return $this->purify($s);
 	}
 
-	public  function purify(string $s): string
+	public function purify(string $s): string
 	{
-		return Decoder::decode($s);
+		return Decoder::purify($s);
 	}
 	
 }
