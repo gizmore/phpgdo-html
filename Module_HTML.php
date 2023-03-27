@@ -33,7 +33,7 @@ final class Module_HTML extends GDO_Module
 	###############
 	### Decoder ###
 	###############
-	public function onModuleInit()
+	public function onModuleInit(): void
 	{
 		GDT_Message::addDecoder('HTML', [self::class, 'DECODE']);
 	}
