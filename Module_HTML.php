@@ -38,7 +38,7 @@ final class Module_HTML extends GDO_Module
 		GDT_Message::addDecoder('HTML', [$this, 'DECODE']);
 	}
 
-	public function decode(string $s): string
+	public function DECODE(string $s): string
 	{
 		$s = Strings::nl2brHTMLSafe($s);
 		return $this->purify($s);

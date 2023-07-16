@@ -51,7 +51,8 @@ final class Decoder
 	 */
 	public static function purify(string $s): string
 	{
-		return self::getPurifier()->purify($s);
+
+		return $s ?: self::getPurifier()->purify($s);
 	}
 
 	###############
